@@ -47,8 +47,19 @@ public class Solvers {
       }
     }
 
-
     return true;
+  }
+
+  public static String urlify(String s) {
+    String solution = "";
+    for(int i = 0; i < s.length(); i+=1) {
+      if ( s.charAt(i) != ' ') {
+        solution += s.charAt(i);
+      } else {
+        solution += "%20";
+      }
+    }
+    return solution;
   }
 
 }

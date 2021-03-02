@@ -10,4 +10,10 @@ public class SolverTests {
     System.out.println(Solvers.checkPermutation("This", "shiT") == true);
     System.out.println(Solvers.checkPermutation("NONO", "hi") == false);
   }
+
+  public static void testURLify() {
+    System.out.println(Solvers.urlify("This is not URLified").equals("This%20is%20not%20URLified"));
+    System.out.println(Solvers.urlify("Nothing").equals("Nothing"));
+    System.out.println(Solvers.urlify("") == "");
+  }
 }
