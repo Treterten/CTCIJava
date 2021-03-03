@@ -16,4 +16,14 @@ public class SolverTests {
     System.out.println(Solvers.urlify("Nothing").equals("Nothing"));
     System.out.println(Solvers.urlify("") == "");
   }
+
+  public static void testPalindromePermutation() {
+    System.out.println("----------- Palindrome Permutation -----------");
+
+    System.out.println(Solvers.palindromePermutation("Tact Coa") == true);
+    System.out.println(Solvers.palindromePermutation("Reacearc") == true);
+    System.out.println(Solvers.palindromePermutation("Erif Tuckr") == false);
+    System.out.println(Solvers.palindromePermutation("Omm") == true);
+    System.out.println(Solvers.palindromePermutation("No") == false);
+  }
 }

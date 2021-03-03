@@ -4,5 +4,6 @@ public class App {
         SolverTests.testIsUnique();
         SolverTests.testCheckPermutation();
         SolverTests.testURLify();
+        SolverTests.testPalindromePermutation();
     }
 }
