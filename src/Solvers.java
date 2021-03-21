@@ -123,9 +123,9 @@ public class Solvers {
         } else {
           // If targetCount does not equal the entry value
           if (targetCount != charDictionary.get(c)) {
-            System.out.println(charDictionary.get(c));
-            System.out.println(c);
-            System.out.println(targetCount);
+            // System.out.println(charDictionary.get(c));
+            // System.out.println(c);
+            // System.out.println(targetCount);
             if (singleChar == null && charDictionary.get(c) == 1) {
               singleChar = c;
             } else if (!singleChar.equals(c)) {
