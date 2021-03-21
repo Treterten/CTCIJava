@@ -138,6 +138,82 @@ public class Solvers {
     return true;
   }
 
+  public static Boolean oneAway(String s1, String s2) {
+    // Initialize grid size (based on which string is larger)
+    int gridSize = Math.max(s1.length(), s2.length());
+    // Initialize grid
+    Integer[][] grid = new Integer[gridSize][gridSize];
+    // If s1 is greater
+    if (s1.length() > s2.length()) {
+      // while s2 is shorter than s1
+      while (s2.length() < s1.length()) {
+        // add a space in front of s2
+        s2 = ' ' + s2;
+      }
+    // else if s2 is greater
+    } else if (s2.length() > s1.length()) {
+      // while s1 is shorter than s2
+      while (s1.length() < s2.length()) {
+        // add a space in front of s2
+        s1 = ' ' + s1;
+      }
+    }
+    // for every row in the grid
+    // System.out.println("New Grid: ");
+    for (int i = 0; i < grid.length; i += 1) {
+      // for every space in the grid
+      for (int j = 0; j < grid[0].length; j += 1) {
+        // IF i -1 and j-1 are greater than or equal to 0
+        if (i - 1 > 0 & j - 1 > 0) {
+          // Set the number at the current square equal the number at j-1 and i-1
+          grid[i][j] = grid[i - 1][j - 1];
+          // else
+        } else {
+            grid[i][j] = 0;
+        }
+      // If the string at i for s1 is the same as the string at j for s2
+        if (s1.charAt(i) != s2.charAt(j)) {
+          // Increment the number at the current square
+          grid[i][j] += 1;
+        }
+        // System.out.print(grid[i][j].toString() + ' ');
+      }
+      // System.out.println();
+    }
+    // If the number at the bottom right of the grid is greater than or equal to 1
+    if (grid[gridSize - 1][gridSize - 1] <= 1) {
+      // return true
+      // System.out.println(grid[grid.length - 1][grid.length - 1]);
+      return true;
+    }
+
+    return false;
+  }
+
+  public static String stringCompression(String s) {
+    // Initialize the letter counter
+    int letterCounter = 0;
+    // Initialize the result string
+    String result = "";
+    // Initialize the current character
+    Character currentCharacter = ' ';
+    // For every character in the string
+    for (int i = 0; i < s.length(); i += 1) {
+      // If the character is the same as the character before and the character is not the first one
+      // if (s.charAt(i) !==)
+        // Increment the letter counter
+      // else
+        // add the character and the letter counter to the result string
+        // set the current character to the character
+        // set the letter counter to one
+
+    }
+    // If the result string is less than the original string
+      // return the result string
+    // return the original string
+    return s;
+  }
+
 
 
 }

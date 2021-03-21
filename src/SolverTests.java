@@ -26,4 +26,12 @@ public class SolverTests {
     System.out.println(Solvers.palindromePermutation("Omm") == true);
     System.out.println(Solvers.palindromePermutation("No") == false);
   }
+
+  public static void testOneAway() {
+    System.out.println("----------- One Away -----------");
+    System.out.println(Solvers.oneAway("Hi", "Hi") == true);
+    System.out.println(Solvers.oneAway("Hello", "ello") == true);
+    System.out.println(Solvers.oneAway("Hello", "Hi") == false);
+    System.out.println(Solvers.oneAway("Excuse", "E") == false);
+  }
 }
