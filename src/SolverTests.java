@@ -34,4 +34,12 @@ public class SolverTests {
     System.out.println(Solvers.oneAway("Hello", "Hi") == false);
     System.out.println(Solvers.oneAway("Excuse", "E") == false);
   }
+
+  public static void testStringCompression() {
+    System.out.println("----------- String Compression -----------");
+    System.out.println(Solvers.stringCompression("abc") == "abc");
+    System.out.println(Solvers.stringCompression("aaaaabbccccc").equals("a5b2c5"));
+    System.out.println(Solvers.stringCompression("aaa").equals("a3"));
+    System.out.println(Solvers.stringCompression("ew") == "ew");
+  }
 }

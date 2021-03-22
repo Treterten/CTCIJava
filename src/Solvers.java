@@ -192,7 +192,7 @@ public class Solvers {
 
   public static String stringCompression(String s) {
     // Initialize the letter counter
-    int letterCounter = 0;
+    Integer letterCounter = 0;
     // Initialize the result string
     String result = "";
     // Initialize the current character
@@ -200,20 +200,25 @@ public class Solvers {
     // For every character in the string
     for (int i = 0; i < s.length(); i += 1) {
       // If the character is the same as the character before and the character is not the first one
-      // if (s.charAt(i) !==)
-        // Increment the letter counter
-      // else
-        // add the character and the letter counter to the result string
-        // set the current character to the character
-        // set the letter counter to one
-
+      if (i > 0) {
+        if (s.charAt(i) != s.charAt(i - 1)) {
+          result += currentCharacter + letterCounter.toString();
+          letterCounter = 1;
+          currentCharacter = s.charAt(i);
+        } else {
+          letterCounter++;
+        }
+      } else {
+        currentCharacter = s.charAt(i);
+        letterCounter = 1;
+      }
     }
-    // If the result string is less than the original string
+    result += currentCharacter + letterCounter.toString();
+    if (s.length() < result.length()) {
       // return the result string
-    // return the original string
-    return s;
+      System.out.println(s);
+      return s;
+    }
+    return result;
   }
-
-
-
 }

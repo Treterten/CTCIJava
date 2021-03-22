@@ -6,5 +6,6 @@ public class App {
         SolverTests.testURLify();
         SolverTests.testPalindromePermutation();
         SolverTests.testOneAway();
+        SolverTests.testStringCompression();
     }
 }
