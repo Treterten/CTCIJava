@@ -42,4 +42,14 @@ public class SolverTests {
     System.out.println(Solvers.stringCompression("aaa").equals("a3"));
     System.out.println(Solvers.stringCompression("ew") == "ew");
   }
+
+  public static void testRotateMatrix() {
+    System.out.println("----------- Rotate Matrix -----------");
+    // System.out.println(Solvers.rotateMatrix())
+    // System.out.println(Solvers.rotateMatrix())
+    // System.out.println(Solvers.rotateMatrix())
+    // System.out.println(Solvers.rotateMatrix())
+    // System.out.println(Solvers.rotateMatrix())
+    // System.out.println(Solvers.rotateMatrix())
+  }
 }

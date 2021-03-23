@@ -221,4 +221,21 @@ public class Solvers {
     }
     return result;
   }
+
+  public static char[][] rotateMatrix(char[][] matrix) {
+    char[][] result = new char[matrix.length][matrix.length];
+    // For each row in the matrix
+    for (int i = 0; i < matrix.length; i += 1) {
+      // Set the target row to the matrix length - 1
+      int targetRow = matrix.length - 1;
+      // For each column in the matrix
+      for (int j = 0; j < matrix.length; j += 1) {
+        // Set the element at [target row][row] to be the current element
+        result[i][targetRow] = matrix[i][j];
+        // Decrement the target row
+        targetRow -= 1;
+      }
+    }
+    return result;
+  }
 }
