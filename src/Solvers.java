@@ -238,4 +238,47 @@ public class Solvers {
     }
     return result;
   }
+
+  public static int[][] zeroMatrix(int[][] matrix) {
+    // Initialize row hash map
+    HashMap<Integer, Boolean> rows = new HashMap<Integer, Boolean>();
+    // Initialize column hash map
+    HashMap<Integer, Boolean> columns = new HashMap<Integer, Boolean>();
+    // Iterate through the matrix (i = row index, j = column index)
+    for (int i = 0; i < matrix.length; i += 1) {
+      for (int j = 0; j < matrix[i].length; j += 1) {
+        // If the element is 0
+        if (matrix[i][j] == 0) {
+          // In the row hash map, set i to true
+          rows.put(i, true);
+          // In the column hash map, set j to true
+          columns.put(j, true);
+        }
+      }
+
+    }
+    // Iterate through the Rows
+    for (int i = 0; i < matrix.length; i += 1) {
+      // If the row is in the hash map
+      if (rows.containsKey(i)) {
+        // iterate through the elements in the row
+        for (int j = 0; j < matrix[i].length; j += 1) {
+          // Set each element to 0
+          matrix[i][j] = 0;
+        }
+      }
+    }
+    // Iterate through the columns
+    for (int j = 0; j < matrix[0].length; j += 1) {
+      // If the column is in the hash map
+      if (columns.containsKey(j)) {
+        // iterate through the elements in the column
+        for (int i = 0; i < matrix.length; i += 1) {
+          // Set each element to 0
+          matrix[i][j] = 0;
+        }
+      }
+    }
+    return matrix;
+  }
 }

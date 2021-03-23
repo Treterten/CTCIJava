@@ -71,4 +71,22 @@ public class SolverTests {
     System.out.println(Arrays.deepToString(Solvers.rotateMatrix(test)).equals(Arrays.deepToString(expected)));
     System.out.println(Arrays.deepToString(Solvers.rotateMatrix(testTwo)).equals(Arrays.deepToString(expectedTwo)));
   }
+  public static void testZeroMatrix() {
+    System.out.println("----------- Zero Matrix -----------");
+    int[][] test = {
+      {1,1,2,3},
+      {2,1,2,0},
+      {7,4,2,6},
+      {1,9,2,3},
+      {0,1,2,3}
+    };
+    int[][] expected = {
+      {0,1,2,0},
+      {0,0,0,0},
+      {0,4,2,0},
+      {0,9,2,0},
+      {0,0,0,0}
+    };
+    System.out.println(Arrays.deepToString(Solvers.zeroMatrix(test)).equals(Arrays.deepToString(expected)));
+  }
 }

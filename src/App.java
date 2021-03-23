@@ -8,5 +8,6 @@ public class App {
         SolverTests.testOneAway();
         SolverTests.testStringCompression();
         SolverTests.testRotateMatrix();
+        SolverTests.testZeroMatrix();
     }
 }
