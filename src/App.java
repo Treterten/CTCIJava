@@ -7,5 +7,6 @@ public class App {
         SolverTests.testPalindromePermutation();
         SolverTests.testOneAway();
         SolverTests.testStringCompression();
+        SolverTests.testRotateMatrix();
     }
 }

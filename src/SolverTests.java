@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class SolverTests {
   public static void testIsUnique() {
     System.out.println(Solvers.isUnique("hi") == true);
@@ -45,11 +46,29 @@ public class SolverTests {
 
   public static void testRotateMatrix() {
     System.out.println("----------- Rotate Matrix -----------");
-    // System.out.println(Solvers.rotateMatrix())
-    // System.out.println(Solvers.rotateMatrix())
-    // System.out.println(Solvers.rotateMatrix())
-    // System.out.println(Solvers.rotateMatrix())
-    // System.out.println(Solvers.rotateMatrix())
-    // System.out.println(Solvers.rotateMatrix())
+    char[][] test = new char[][] {
+      {'R','G','B'},
+      {'R','G','G'},
+      {'G','B','G'}
+    };
+    char[][] expected = new char[][] {
+      {'B','G','G'},
+      {'G','G','B'},
+      {'R','R','G'}
+    };
+    char[][] testTwo = new char[][] {
+      {'R','G','B','G'},
+      {'R','G','G','R'},
+      {'G','B','G','G'},
+      {'G','R','R','R'}
+    };
+    char[][] expectedTwo = new char[][] {
+      {'G','R','G','R'},
+      {'B','G','G','R'},
+      {'G','G','B','R'},
+      {'R','R','G','G'}
+    };
+    System.out.println(Arrays.deepToString(Solvers.rotateMatrix(test)).equals(Arrays.deepToString(expected)));
+    System.out.println(Arrays.deepToString(Solvers.rotateMatrix(testTwo)).equals(Arrays.deepToString(expectedTwo)));
   }
 }

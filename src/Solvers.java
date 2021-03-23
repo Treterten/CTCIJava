@@ -231,7 +231,7 @@ public class Solvers {
       // For each column in the matrix
       for (int j = 0; j < matrix.length; j += 1) {
         // Set the element at [target row][row] to be the current element
-        result[i][targetRow] = matrix[i][j];
+        result[targetRow][i] = matrix[i][j];
         // Decrement the target row
         targetRow -= 1;
       }
