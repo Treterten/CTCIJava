@@ -89,4 +89,10 @@ public class SolverTests {
     };
     System.out.println(Arrays.deepToString(Solvers.zeroMatrix(test)).equals(Arrays.deepToString(expected)));
   }
+  public static void testStringRotation() {
+    System.out.println("----------- String Rotation -----------");
+    System.out.println(Solvers.stringRotation("waterbottle", "erbottlewat") == true);
+    System.out.println(Solvers.stringRotation("happy birthday", "ppy birthdayha") == true);
+    System.out.println(Solvers.stringRotation("is", "i") == false);
+  }
 }

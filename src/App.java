@@ -9,5 +9,6 @@ public class App {
         SolverTests.testStringCompression();
         SolverTests.testRotateMatrix();
         SolverTests.testZeroMatrix();
+        SolverTests.testStringRotation();
     }
 }

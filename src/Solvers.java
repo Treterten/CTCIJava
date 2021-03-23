@@ -281,4 +281,14 @@ public class Solvers {
     }
     return matrix;
   }
+  public static boolean stringRotation(String s1, String s2) {
+    // Initialize repeated string
+    String s1Twice = s1 + s1;
+    // If the second string is a substring of the repeated string and the second and first string are equal lengths
+    if (s1Twice.indexOf(s2) > -1 & s1.length() == s2.length()) {
+      // return true
+      return true;
+    }
+    return false;
+  }
 }
